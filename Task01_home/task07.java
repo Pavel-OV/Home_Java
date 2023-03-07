@@ -32,7 +32,6 @@ public class task07 {
         System.out.printf(a+" "+math_znak+" "+b+" = "+ud_pv); 
     }
 
-    private static char charAt(int i) {
-        return 0;
+   
     }
-}
+
