@@ -55,18 +55,12 @@ public class task09 {
                     array[i + 1] = buf;
                     
                 }
-                writer.write(array[i]+" ");
-                writer.write("\n");
-                
-
-               
+                }
             }
-            
-        }
         for (int i = 0; i < size; i++) {
             System.out.print(" " + array[i]);
         }
-        writer.close();
+       
         }
         catch (Exception e){
             System.out.println("Что то пошло не так");
