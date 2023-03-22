@@ -30,6 +30,10 @@ public class task11 {
         BufferedReader reader = new BufferedReader(new FileReader("D:\\Home_Java\\Task02_home\\spisok.txt"));
           reader = new BufferedReader(new FileReader("D:\\Home_Java\\Task02_home\\spisok.txt") );
           String line = reader.readLine();
+          System.out.println("Скаченная строка из файла spisok.txt");
+          System.out.println(line);
+          System.out.println();
+          System.out.println("Преобразуем скаченную строку");
           StringBuilder rows= new StringBuilder();
           while (line != null) {
             String[] str_array = line.split("[\",:]");
@@ -54,4 +58,21 @@ public class task11 {
         }
      
     }
+
+//     public static StringBuilder getRows ( String line) {
+//       StringBuilder rows= new StringBuilder();
+//       while (line != null) {
+//         String[] str_array = line.split("[\",:]");
+//         for (String s : str_array) {
+//         switch (s) {
+//         case "фамилия" -> rows.append("Студент ");
+//         case "оценка" -> rows.append(" получил ");
+//         case "предмет" -> rows.append(" по предмету ");
+//         default -> rows.append(s);
+//         }
+//         }
+    
+//    }
+//       return rows;
+//   }
 }
