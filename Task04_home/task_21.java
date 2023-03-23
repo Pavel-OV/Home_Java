@@ -1,4 +1,5 @@
 package Task04_home;
+
 import java.util.Objects;
 import java.util.Scanner;
 import java.util.Stack;
@@ -27,36 +28,18 @@ import Task02_home.input;
 // ответ:
 // 9
 
-// Пример 2
-// Ввод: 1
-// Ввод: +
-// Ввод: 2
-// Вывод: 3
-// Ввод:+
-// Ввод:4
-// Вывод 7
-// Ввод:*
-// Ввод:3
-// Вывод 21
-// Отмена
-// Вывод 7
-// Отмена
-// Вывод 3
-// Ввод:-
-// Ввод:1
-// Вывод 2
-
 public class task_21 {
-    static Scanner scanner= new Scanner(System.in);
+    static Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) {
-        
-        Stack <Object> zhurnal_math =new Stack<>();
+
+        Stack<Object> zhurnal_math = new Stack<>();
         System.out.println("Реализовать простой калькулятор (+ - / *)");
-        double ud_pv=0;
+        double ud_pv = 0;
         double a = input.Double("Введите число a");
         zhurnal_math.push(a);
-        String math_znak=input.Str("Введите оператор (+, -, *, /): ");
-        double b= input.Double("Введите число b ");
+        String math_znak = input.Str("Введите оператор (+, -, *, /): ");
+        double b = input.Double("Введите число b ");
         zhurnal_math.push(b);
         if (Objects.equals(math_znak, "+")) {
             ud_pv = a + b;
@@ -93,14 +76,11 @@ public class task_21 {
                     ud_pv = ud_pv / b;
                 } else
                     System.out.printf("Неверный ввод !");
-                    zhurnal_math.push(ud_pv);
+                zhurnal_math.push(ud_pv);
                 System.out.println("ответ = " + ud_pv);
             }
-        System.out.println(zhurnal_math);
+            System.out.println(zhurnal_math);
         }
-      
+
     }
 }
-
-    
- 
