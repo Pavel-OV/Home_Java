@@ -29,41 +29,38 @@ public class task_23 {
 
 
 
-// Написать программу, которая найдет и выведет повторяющиеся имена с количеством повторений.
-// Отсортировать по убыванию популярности Имени.
+
  public static void main(String[] args) {
   System.out.println("структуру телефонной книги с помощью HashMap");
   
     
-  Map<Integer, String> map = new HashMap<>();
+  Map< String, Integer> map = new HashMap<>();
   map = pasport();
   
-  for (Map.Entry<Integer,String> item: map.entrySet()){
-    if(item.getValue().equals("Иванов"))
-    System.out.println("Иванов "+item.getKey())  ;  
-  }
-  for (Map.Entry<Integer,String> item: map.entrySet()){
+  // for (Map.Entry< String, Integer> item: map.entrySet()){
+  //   if(item.getValue().equals("Иванов"))
+  //   System.out.println("Иванов "+item.getKey())  ;  
+  // }
+  for (Map.Entry< String, Integer> item: map.entrySet()){
     //if(item.getKey()== 234561 )
-    System.out.printf("Номер: %s Фамилия %s\n",item.getKey(),item.getValue());
+    System.out.printf("Фамилия: %s Номер телефона %s\n",item.getKey(),item.getValue());
   }
 
 
  }
 
 
-  public static HashMap<Integer, String> pasport() {
-  HashMap<Integer, String> pasport = new HashMap<>();
-  pasport.put(123456, "Иванов");
-  pasport.put(321456, "Васильев");
-  pasport.put(234561, "Петрова");
-  pasport.put(234432, "Иванов");
-  pasport.put(654321,"Петрова");
-  pasport.put(345678, "Иванов");  
+  public static HashMap< String, Integer> pasport() {
+  HashMap<String, Integer> pasport = new HashMap<>();
+  pasport.put("Иванов", 123456);
+  pasport.put("Васильев", 321456);
+  pasport.put("Петрова", 234561);
+ 
   int number = 1;
   while(number !=0){
-    number = input.Int("Введите номер паспорта");
-    String surname = input.Str("Введите фамилию");
-    pasport.put(number, surname);
+    number = input.Int("Введите фамилию");
+    String surname = input.Str("Добавте номер телефона");
+    pasport.put(surname, number);
   }
   return pasport;
 }
