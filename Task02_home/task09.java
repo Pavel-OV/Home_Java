@@ -6,17 +6,6 @@
 // 4*дополнительно. К калькулятору из предыдущего дз добавить логирование.
 // 1 + 3 = 4
 
-// Напишите метод, который сжимает строку. Пример: вход aaaabbbcddaaa.
-// результат - a4b3cd2a3
-// .charAt(i)
-// stroka = "Привет"
-
-// stroka1 = new String
-
-// stroka1 = "Привет"
-
-// stroka == stroka1 ----> False
-
 package Task02_home;
 import java.io.File;
 import java.io.FileWriter;

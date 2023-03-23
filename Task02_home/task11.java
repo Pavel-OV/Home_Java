@@ -57,20 +57,4 @@ public class task11 {
      
     }
 
-//     public static StringBuilder getRows ( String line) {
-//       StringBuilder rows= new StringBuilder();
-//       while (line != null) {
-//         String[] str_array = line.split("[\",:]");
-//         for (String s : str_array) {
-//         switch (s) {
-//         case "фамилия" -> rows.append("Студент ");
-//         case "оценка" -> rows.append(" получил ");
-//         case "предмет" -> rows.append(" по предмету ");
-//         default -> rows.append(s);
-//         }
-//         }
-    
-//    }
-//       return rows;
-//   }
 }
