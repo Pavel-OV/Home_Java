@@ -36,18 +36,19 @@ public class task_23 {
     
   Map< String, Integer> map = new HashMap<>();
   map = pasport();
+  System.out.println(map);
   
-  // for (Map.Entry< String, Integer> item: map.entrySet()){
-  //   if(item.getValue().equals("Иванов"))
-  //   System.out.println("Иванов "+item.getKey())  ;  
-  // }
   for (Map.Entry< String, Integer> item: map.entrySet()){
-    //if(item.getKey()== 234561 )
-    System.out.printf("Фамилия: %s Номер телефона %s\n",item.getKey(),item.getValue());
+    if(item.getValue().equals(123456))
+    System.out.println("Иванов "+item.getKey())  ;  
+  }
+  // for (Map.Entry< String, Integer> item: map.entrySet()){
+  //   if(item.getKey()== 234561 ){
+  //      System.out.printf("Фамилия: %s Номер телефона %s\n",item.getKey(),item.getValue());}
   }
 
 
- }
+ 
 
 
   public static HashMap< String, Integer> pasport() {
@@ -58,10 +59,12 @@ public class task_23 {
  
   int number = 1;
   while(number !=0){
-    number = input.Int("Введите фамилию");
-    String surname = input.Str("Добавте номер телефона");
+    String surname = input.Str("Введите фамилию");
+    number = input.Int("Добавте номер телефона");
+    
     pasport.put(surname, number);
   }
   return pasport;
 }
 }
+
