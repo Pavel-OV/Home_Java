@@ -23,7 +23,7 @@ public class task_27 {
             Random rnd = new Random();
             Integer row = rnd.nextInt(8);
             Integer col = rnd.nextInt(8);
-            chess_board[row][col]=8;
+            chess_board[row][col]=0;
             rows.add(row);
             column.add(col);
             ferz = 1;
@@ -31,7 +31,7 @@ public class task_27 {
                 for (int v = 0; v < chess_board.length; v++) {
                     if (checkString(rows, g) && checkString(column, v)
                             && checkDiagonale(rows, column, g, v)) {
-                        chess_board[g][v] = 8;
+                        chess_board[g][v] = 0;
                         rows.add(g);
                         column.add(v);
                         ferz++;

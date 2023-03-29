@@ -1,7 +1,6 @@
 package Task05_home;
 
-import java.util.ArrayList;
-import java.util.Collection;
+
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -11,7 +10,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.stream.Collectors;
 
-import Task02_home.input;
+
 
 public class task_25 {
     // Пусть дан список сотрудников:
