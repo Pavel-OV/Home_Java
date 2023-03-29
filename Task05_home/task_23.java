@@ -1,7 +1,12 @@
 package Task05_home;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.Scanner;
+
+import javax.lang.model.element.Name;
 
 import Task02_home.input;
 
@@ -26,45 +31,51 @@ public class task_23 {
 // 2) Вывод всего
 // Я: 2
 // Иванов: 1242353, 547568
-
-
-
-
  public static void main(String[] args) {
-  System.out.println("структуру телефонной книги с помощью HashMap");
-  
+  System.out.println("Структура телефонной книги ");
+  Map<String, ArrayList<Integer>> abonents = new HashMap<String, ArrayList<Integer>>();
+  while (true) {
+    System.out.println("1)Создание абонета \n2)Поиск абонета");
+    Integer number = input.Int("Выберите номер команды");
+    if(number==1){
+      System.out.println("Создание и добавления абонета\nФамилия");
+      Scanner nam = new Scanner(System.in, "cp866");
+      String name = nam.nextLine();
+      System.out.println("Номер абонента");
+      Scanner num = new Scanner(System.in);
+      int numbers = num.nextInt();
+      abonents = addPhones(abonents, name, numbers);     
+      System.out.println("Абонент записан!\n");
+      continue;
+       }
+    if (number==2)
+    System.out.println("Поиск фамилии");
+    Scanner s_n = new Scanner(System.in,"cp866");
+    String surname = s_n.nextLine();
+    printAbonents(abonents,surname);
+    break;
     
-  Map< String, Integer> map = new HashMap<>();
-  map = pasport();
-  System.out.println(map);
+    }
   
-  for (Map.Entry< String, Integer> item: map.entrySet()){
-    if(item.getValue().equals(123456))
-    System.out.println("Иванов "+item.getKey())  ;  
-  }
-  // for (Map.Entry< String, Integer> item: map.entrySet()){
-  //   if(item.getKey()== 234561 ){
-  //      System.out.printf("Фамилия: %s Номер телефона %s\n",item.getKey(),item.getValue());}
-  }
-
-
  
+}
+public static  Map<String, ArrayList<Integer>> addPhones(Map<String, ArrayList<Integer>>abonents,String name, Integer numbers) {
+  if(abonents.containsKey(name)){
+    abonents.get(name).add(numbers);
+  }else{
+    abonents.put(name, getList(name, numbers));  
 
-
-  public static HashMap< String, Integer> pasport() {
-  HashMap<String, Integer> pasport = new HashMap<>();
-  pasport.put("Иванов", 123456);
-  pasport.put("Васильев", 321456);
-  pasport.put("Петрова", 234561);
- 
-  int number = 1;
-  while(number !=0){
-    String surname = input.Str("Введите фамилию");
-    number = input.Int("Добавте номер телефона");
+  }
+    return abonents;
+  }
+  public static ArrayList<Integer> getList(String name, Integer number) {
+    List<Integer> listphones = new ArrayList<>();
+    listphones.add(number);
+    return (ArrayList<Integer>) listphones;
+}
+  public static  void printAbonents(Map<String, ArrayList<Integer>>abonents,String name) {
+     System.out.println("Абонент " + name + " имеет следующие номера: " + abonents.get(name));
     
-    pasport.put(surname, number);
   }
-  return pasport;
-}
-}
 
+}
