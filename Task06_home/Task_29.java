@@ -1,3 +1,9 @@
+package Task06_home;
+import java.util.HashSet;
+import java.util.Set;
+public class Task_29{
+
+
 // Подумать над структурой класса Ноутбук для магазина техники - выделить поля и методы. Реализовать в java.
 // Создать множество ноутбуков.
 // Написать метод, который будет запрашивать у пользователя критерий фильтрации и выведет ноутбуки, отвечающие фильтру.
@@ -23,8 +29,14 @@
 // Выбор параметра
 // выбор конкретнее
 // вывод подходящих
-public class Task_29{
+
     public static void main(String[] args) {
-        
+        Set <Laptop> notebook =new HashSet<>();
+        System.out.println("\n Здравествуйте! Давайте подберем для Вас подходящий ноутбук!");
+        notebook.add(new Laptop ("Samsung","Windows", 16,  500,17," Китай"));
+        System.out.println(notebook);
+       
+
     }
+
 }
