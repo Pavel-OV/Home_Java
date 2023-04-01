@@ -23,3 +23,8 @@
 // Выбор параметра
 // выбор конкретнее
 // вывод подходящих
+public class Task_29{
+    public static void main(String[] args) {
+        
+    }
+}

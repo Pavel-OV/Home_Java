@@ -5,14 +5,24 @@ public class Laptop{
     private String operating_system;
     private Integer diagonal;
     private Integer weight;
-    private String colour;
-    private String manufacturer;
+    private String color;
+    private String country;
 
-   
+   public Laptop( String operating_system, Integer ram, Integer hdd,Integer diagonal, String color,String country,Integer weight) {
+    this.operating_system=operating_system;
+    this.ram=ram;
+    this.hdd= hdd;
+    this.diagonal=diagonal;
+    this.color=color;
+    this.country=country;
+    this.weight=weight;
+    
+    
+   }
 
 
-    public void setManufacturer(String manufacturer) {
-        this.manufacturer = manufacturer;
+    public void setCountry(String country) {
+        this.country = country;
     }
     
     public void setRam(Integer ram) {
@@ -30,8 +40,8 @@ public class Laptop{
     public void setWeight(Integer weight) {
         this.weight = weight;
     }
-    public void setColour(String colour) {
-        this.colour = colour;
+    public void setColour(String color) {
+        this.color = color;
     }
 
 
@@ -52,12 +62,20 @@ public class Laptop{
         return weight;
     }
     public String getColour() {
-        return colour;
+        return color;
     }
-    public String getManufacturer() {
-        return manufacturer;
+    public String getCountry() {
+        return country;
     }
-    
+
+    public String toString() {
+        return String.format("%s:%s", operating_system,ram,hdd,diagonal,color, country, weight);
+    }
+
+    // public String toString() {
+    //     return ""
+        
+    // }
 
 
 }
