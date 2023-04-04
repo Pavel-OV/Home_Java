@@ -1,11 +1,14 @@
 package Task06_home;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Laptop {
 
-    private Integer ram;
-    private Integer hdd;
+    private String ram;
+    private String hdd;
     private String operating_system;
-    private Integer diagonal;
+    private String diagonal;
     private String brend;
 
     
@@ -13,7 +16,7 @@ public class Laptop {
     // private String color;
     private String country;
 
-    public Laptop(String brend,String operating_system, Integer ram, Integer hdd, Integer diagonal, String country) {
+    public Laptop(String brend,String operating_system, String ram,String hdd, String diagonal, String country) {
         this.operating_system = operating_system;
         this.ram = ram;
         this.hdd = hdd;
@@ -24,6 +27,7 @@ public class Laptop {
         // this.weight=weight;
 
     }
+   
 
     public void setBrend(String brend) {
     this.brend = brend;
@@ -33,11 +37,11 @@ public class Laptop {
         this.country = country;
     }
 
-    public void setRam(Integer ram) {
+    public void setRam(String ram) {
         this.ram = ram;
     }
 
-    public void setHdd(Integer hdd) {
+    public void setHdd(String hdd) {
         this.hdd = hdd;
     }
 
@@ -45,7 +49,7 @@ public class Laptop {
         this.operating_system = operating_system;
     }
 
-    public void setDiagonal(Integer diagonal) {
+    public void setDiagonal(String diagonal) {
         this.diagonal = diagonal;
     }
     // public void setWeight(Integer weight) {
@@ -59,11 +63,11 @@ public class Laptop {
         return brend;
     }
 
-    public Integer getRam() {
+    public String getRam() {
         return ram;
     }
 
-    public Integer getHdd() {
+    public String getHdd() {
         return hdd;
     }
 
@@ -71,7 +75,7 @@ public class Laptop {
         return operating_system;
     }
 
-    public Integer getDiagonal() {
+    public String getDiagonal() {
         return diagonal;
     }
 
@@ -87,9 +91,9 @@ public class Laptop {
 
     @Override
     public String toString() {
-        return String.format("Фирма :%s Оперецинная система :%s:\n" +
-                "оперативная память: %s  постоянная память %s  диаганаль:%s " +
-                "страна %s", brend, operating_system, ram, hdd, diagonal, country);
+        return String.format("\nБрэнд - %s \nОперецинная система - %s\n" +
+                "оперативная память -  %s Гб  постоянная память - %s Гб  диаганаль - %s страна - %s"
+                , brend, operating_system, ram, hdd, diagonal, country);
     }
-
+    
 }
